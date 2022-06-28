@@ -3,8 +3,8 @@ import { useState } from 'react'
 
 import { uuidv4, PlusCircle } from 'Libs';
 
-import styles from 'App.module.css';
-import { Header } from 'components/Header';
+import styles from './App.module.css';
+import { Header } from 'components';
 
 export function App() {
   

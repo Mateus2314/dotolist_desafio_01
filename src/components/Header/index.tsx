@@ -10,7 +10,7 @@ export function Header() {
 
       <img src={ rocketLogo } alt="Logo rocket"/>
 
-      <img src={ todoLogo } alt="Logo Todo"/>
+      <img src={ todoLogo } alt="Logo Todo-list"/>
 
     </header>
   )
