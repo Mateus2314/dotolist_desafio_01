@@ -15,11 +15,14 @@ export function App() {
   const [countTasks, setCountTasks] = useState(0)
   const [tasksCompleted, setTasksCompleted] = useState(0)
 
-  const isNewTaskEmpty = newTask.length == 0
+  const isNewTaskEmpty = newTask.length === 0
 
   function handleCreateTask() {
+
     setTasks([
+
       ...tasks,
+
       {
         id: uuidv4(),
         description: newTask,
@@ -36,16 +39,21 @@ export function App() {
   }
 
   function handleNewTask(event: ChangeEvent<HTMLInputElement>) {
+
     setNewTask(event.target.value)
+
   }
 
   function taskCompleted(tasks: taskProps[]) {
+
     const result = tasks.filter(task => task.checked === true)
+
     setTasksCompleted(result.length)
   }
 
   function handleDeleteTask(id: string) {
     const taskDelete = tasks.filter(task => task.id != id)
+
     setTasks([...taskDelete])
 
     setCountTasks(task => {
@@ -74,18 +82,17 @@ export function App() {
   return (
 
     <div className={styles.wrapper}>
-
       <Header />
 
       <div className={styles.newTask}>
-        <input placeholder="Add a new Task" value={newTask} onChange={handleNewTask} />
+        <input placeholder="Add a new task " value={newTask} onChange={handleNewTask} />
         <button
           onClick={handleCreateTask}
           disabled={isNewTaskEmpty}
-          title={isNewTaskEmpty ? 'Enter a task to activate the button' : ''}
+          title={isNewTaskEmpty ? 'Type a task to activate the button' : ''}
         >
           Create
-          <PlusCircle size={16} />
+          <PlusCircle size={20} />
         </button>
       </div>
 
@@ -93,12 +100,12 @@ export function App() {
         <main>
           <div className={styles.countTasks}>
             <div className={styles.createTasks}>
-              <strong>Created Tasks</strong>
+              <strong>Issues to Do</strong>
               <span>{countTasks}</span>
             </div>
 
             <div className={styles.completedTasks}>
-              <strong>Completed !</strong>
+              <strong>Completed</strong>
 
               {countTasks == 0 ? (
                 <span>{countTasks}</span>
@@ -119,17 +126,11 @@ export function App() {
           ) : (
             <EmptyTasks />
           )}
-
-
         </main>
-
-
       </div>
 
 
-
     </div>
-
 
 
   )

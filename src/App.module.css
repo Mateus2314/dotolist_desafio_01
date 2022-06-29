@@ -59,8 +59,12 @@
 }
 
 .main {
+  max-width: 46rem;
+  height: 18rem;
+  margin: 0 auto;
+}
 
-
+.countTasks {
   max-width: 46rem;
   font-size: 0.875rem;
   font-weight: 700;
@@ -70,7 +74,6 @@
   justify-content: space-between;
 
   margin-bottom: 1.5rem;
-  
 }
 
 .createTasks {
@@ -106,5 +109,3 @@
   padding: 2px 8px;
   border-radius: 999px;
 }
-
-

@@ -3,6 +3,7 @@ import { ListItem } from 'components'
 
 import styles from './styles.module.css'
 
+
 export function ListTasks({ tasks, handleCheckedTask, handleDeleteTask }: ListTaskProps) {
   return (
     <div className={styles.listTasks}>

@@ -8,7 +8,7 @@ export function EmptyTasks() {
 
     <div className={styles.emptyTasks} >
 
-      <img src={logoTasksEmpty} alt="Icones de tarefas não finalizadas"> </img>
+      <img src={logoTasksEmpty} alt="Tasks to Do"> </img>
 
       <div>
 

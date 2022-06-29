@@ -1,6 +1,6 @@
-import { Header } from 'components/Header';
-import { EmptyTasks } from 'components/EmptyTasks';
-import { ListItem } from 'components/ListItem';
-import { ListTasks } from 'components/ListTasks';
+import { EmptyTasks } from 'components/EmptyTasks'
+import { Header } from 'components/Header'
+import { ListItem } from 'components/ListItem'
+import { ListTasks } from 'components/ListTasks'
 
-export { Header , EmptyTasks, ListItem , ListTasks }
+export { EmptyTasks, Header, ListItem, ListTasks }

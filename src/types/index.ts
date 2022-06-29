@@ -1,10 +1,12 @@
 export interface taskProps {
+  
   id: string 
   description: string
   checked: boolean
+
 }
 
-interface handleFunctionProps {
+export interface handleFunctionProps {
   handleCheckedTask: ( id: string ) => void
   handleDeleteTask: (id: string ) => void
 }
